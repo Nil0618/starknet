@@ -276,7 +276,7 @@ impl StarknetBlocksTable {
             ),
             StarknetBlocksBlockId::Latest => connection.prepare(
                 "SELECT hash, number, root, timestamp, gas_price, sequencer_address
-                    FROM starknet_blocks ORDER BY number DESC LIMIT 1",
+                    FROM starknet_blocks WHERE number = (SELECT MAX(number) from starknet_blocks) LIMIT 1",
             ),
         }?;
 

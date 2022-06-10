@@ -242,7 +242,7 @@ def resolve_block(connection, at_block):
         # it has been decided that the latest is whatever pathfinder knows to be latest synced block
         # regardless of it being the highest known (not yet synced)
         cursor = connection.execute(
-            "select number, timestamp, root, gas_price, sequencer_address from starknet_blocks order by number desc limit 1"
+            "select number, timestamp, root, gas_price, sequencer_address from starknet_blocks where number = (select max(number) from starknet_blocks) limit 1"
         )
     elif type(at_block) == int:
         cursor = connection.execute(
