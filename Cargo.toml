@@ -1,8 +1,0 @@
-[workspace]
-members = [
-    "crates/load-test",
-    "crates/pathfinder",
-    "crates/stark_curve",
-    "crates/stark_hash",
-]
-resolver = "2"
