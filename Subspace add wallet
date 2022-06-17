@@ -1,0 +1,2 @@
+echo 'export SUBSPACE_NODENAME='YOUR_NODE_NAME >> $HOME/.bash_profile
+echo 'export SUBSPACE_WALLET='YOUR_WALLET >> $HOME/.bash_profile
