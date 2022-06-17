@@ -1,0 +1,2 @@
+ALCHEMY=YOUR_ALCHEMY_HTTP_ADDRESS
+echo 'export ALCHEMY='$ALCHEMY >> $HOME/.bash_profile
